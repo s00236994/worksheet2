@@ -15,11 +15,21 @@ export class App {
     "Seven",
     "Rambo",
     "Scarface",
-    "Real Steel"
+    "Real Steel"]
 
-  ])
+  )
 
+  protected favourites=signal<string[]>([]);
 
+  protected addFavourites(fav:string) {
+    this.favourites.update(current => [...current, fav]);
+  }
+
+  protected deleteFavourites(index:number) {
+    this.favourites.update(favourites =>
+      favourites.filter((_, i) => i !== index)
+    );
+  }
 
 }
 
