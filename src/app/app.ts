@@ -8,5 +8,19 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('worksheet2');
+  protected readonly title = signal('Martin Durkin worksheet2');
+
+  protected movies = signal([
+    "Law Abiding Citizen",
+    "Seven",
+    "Rambo",
+    "Scarface",
+    "Real Steel"
+
+  ])
+
+
+
 }
+
+
