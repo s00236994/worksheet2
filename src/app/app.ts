@@ -20,6 +20,7 @@ export class App {
   )
 
   protected favourites=signal<string[]>([]);
+  
 
   protected addFavourites(fav:string) {
 
