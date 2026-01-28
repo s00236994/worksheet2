@@ -22,7 +22,14 @@ export class App {
   protected favourites=signal<string[]>([]);
 
   protected addFavourites(fav:string) {
-    this.favourites.update(current => [...current, fav]);
+
+    //dont allow dupes
+    if (!this.favourites().includes(fav) ){
+
+       this.favourites.update(current => [...current, fav]);
+
+    }
+   
   }
 
   protected deleteFavourites(index:number) {
